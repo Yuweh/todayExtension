@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-bw-kYw">
+                                <rect key="frame" x="261" y="6" width="43" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vsi-Gf-4rY">
+                                <rect key="frame" x="16" y="15" width="225" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="RcH-Ii-mu8"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to view details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjc-XI-NOz">
+                                <rect key="frame" x="16" y="25" width="200" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="4Ol-eB-Svh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Swh-ew-Xis"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Vsi-Gf-4rY" firstAttribute="centerY" secondItem="JZM-bw-kYw" secondAttribute="centerY" id="3GW-j9-DMw"/>
+                            <constraint firstItem="Fjc-XI-NOz" firstAttribute="top" secondItem="Vsi-Gf-4rY" secondAttribute="bottom" constant="8" id="7t6-oh-Ozm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vsi-Gf-4rY" secondAttribute="trailing" constant="63" id="9NV-n2-lTe"/>
+                            <constraint firstItem="Vsi-Gf-4rY" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="16" id="BDa-RZ-kEV"/>
+                            <constraint firstItem="JZM-bw-kYw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" symbolic="YES" id="Fx7-Yt-E6J"/>
+                            <constraint firstItem="Vsi-Gf-4rY" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="15" id="GiW-Ax-ioX"/>
+                            <constraint firstItem="Fjc-XI-NOz" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="Hrk-iH-GQt"/>
+                            <constraint firstItem="JZM-bw-kYw" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="6" id="OOf-Yt-qC6"/>
+                            <constraint firstAttribute="trailing" secondItem="JZM-bw-kYw" secondAttribute="trailing" constant="16" id="Zs7-sG-OIr"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Fjc-XI-NOz" secondAttribute="trailing" constant="104" id="awK-6E-tef"/>
+                            <constraint firstItem="Fjc-XI-NOz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ssy-KU-ocm" secondAttribute="leading" id="zAI-Gx-dD6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="barView" destination="Vsi-Gf-4rY" id="fUR-Ml-tdD"/>
+                        <outlet property="percentLabel" destination="JZM-bw-kYw" id="oNH-ED-6Aw"/>
+                        <outlet property="usedLabel" destination="Fjc-XI-NOz" id="rJU-f2-5BV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
